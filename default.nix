@@ -10,7 +10,8 @@ in
     buildInputs = [ 
       pkgs.direnv
       pkgs.git
-      pkgs.less 
+      pkgs.less
+      pkgs.openssh 
     ];
     inputsFrom = [ build ];
 
