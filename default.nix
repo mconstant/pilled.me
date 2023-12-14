@@ -8,6 +8,7 @@ in
   inherit build;
   shell = pkgs.mkShell {
     buildInputs = [ 
+      pkgs.direnv
       pkgs.git
       pkgs.less 
     ];
