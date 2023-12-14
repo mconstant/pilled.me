@@ -1,0 +1,13 @@
+[init]
+    defaultbranch = main
+
+[user]
+    name = Satoshi Nakamoto
+    email = satoshin@gmx.net
+
+[branch]
+    [main]
+        merge = refs/heads/main
+
+[core]
+    autocrlf = false
