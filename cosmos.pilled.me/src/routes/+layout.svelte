@@ -1,13 +1,15 @@
 <script>
 	import '../app.pcss';
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import {
 		Sidebar,
 		SidebarBrand,
 		SidebarGroup,
 		SidebarItem,
-		SidebarDropdownItem, 
-        SidebarDropdownWrapper
+		SidebarDropdownItem,
+		SidebarDropdownWrapper
 	} from 'flowbite-svelte';
 
 	let site = {
@@ -17,6 +19,9 @@
 	};
 	// use $page.path directly
 	$: activeUrl = $page.url.pathname;
+	onMount(() => {
+		goto('/blast-off');
+	});
 </script>
 
 <Sidebar
@@ -25,8 +30,10 @@
 >
 	<SidebarBrand {site} />
 	<SidebarGroup>
-		<SidebarItem label="🚀 Blast Off" href={`/blast-off`} active={activeUrl === '/blast-off'}></SidebarItem>
-		<SidebarItem label="▶️ First Steps" href={`/first-steps`} active={activeUrl === '/first-steps'}></SidebarItem>
+		<SidebarItem label="🚀 Blast Off" href={`/blast-off`} active={activeUrl === '/blast-off'}
+		></SidebarItem>
+		<SidebarItem label="▶️ First Steps" href={`/first-steps`} active={activeUrl === '/first-steps'}
+		></SidebarItem>
 	</SidebarGroup>
 	<SidebarGroup border>
 		<SidebarItem label="🪐 What is Cosmos"></SidebarItem>
@@ -36,25 +43,25 @@
 	</SidebarGroup>
 	<SidebarGroup border>
 		<SidebarDropdownWrapper label="📈 Try Osmosis">
-            <SidebarDropdownItem label="foo"/> 
-            <SidebarDropdownItem label="bar"/> 
-        </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="🌩️ Try Akash">
-            <SidebarDropdownItem label="foo"/> 
-            <SidebarDropdownItem label="bar"/> 
-        </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="🤐 Try Secret Network">
-            <SidebarDropdownItem label="🖼️ Get NFTs Privately Using Stashh"/> 
-            <SidebarDropdownItem label="bar"/> 
-        </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="🚶‍♀️ Try Stride">
-            <SidebarDropdownItem label="foo"/> 
-            <SidebarDropdownItem label="bar"/> 
-        </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="🧬 Try Injective">
-            <SidebarDropdownItem label="foo"/> 
-            <SidebarDropdownItem label="bar"/> 
-        </SidebarDropdownWrapper>
+			<SidebarDropdownItem label="foo" />
+			<SidebarDropdownItem label="bar" />
+		</SidebarDropdownWrapper>
+		<SidebarDropdownWrapper label="🌩️ Try Akash">
+			<SidebarDropdownItem label="foo" />
+			<SidebarDropdownItem label="bar" />
+		</SidebarDropdownWrapper>
+		<SidebarDropdownWrapper label="🤐 Try Secret Network">
+			<SidebarDropdownItem label="🖼️ Get NFTs Privately Using Stashh" />
+			<SidebarDropdownItem label="bar" />
+		</SidebarDropdownWrapper>
+		<SidebarDropdownWrapper label="🚶‍♀️ Try Stride">
+			<SidebarDropdownItem label="foo" />
+			<SidebarDropdownItem label="bar" />
+		</SidebarDropdownWrapper>
+		<SidebarDropdownWrapper label="🧬 Try Injective">
+			<SidebarDropdownItem label="foo" />
+			<SidebarDropdownItem label="bar" />
+		</SidebarDropdownWrapper>
 	</SidebarGroup>
 </Sidebar>
 
