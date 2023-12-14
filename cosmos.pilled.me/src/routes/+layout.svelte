@@ -6,7 +6,8 @@
 		SidebarBrand,
 		SidebarGroup,
 		SidebarItem,
-		SidebarWrapper
+		SidebarDropdownItem, 
+        SidebarDropdownWrapper
 	} from 'flowbite-svelte';
 
 	let site = {
@@ -34,11 +35,26 @@
 		<SidebarItem label="🪙 Get Coinbase"></SidebarItem>
 	</SidebarGroup>
 	<SidebarGroup border>
-		<SidebarItem label="📈 Try Osmosis"></SidebarItem>
-		<SidebarItem label="🌩️ Try Akash"></SidebarItem>
-		<SidebarItem label="🤐 Try Secret Network"></SidebarItem>
-		<SidebarItem label="🚶‍♀️ Try Stride"></SidebarItem>
-		<SidebarItem label="🧬 Try Injective"></SidebarItem>
+		<SidebarDropdownWrapper label="📈 Try Osmosis">
+            <SidebarDropdownItem label="foo"/> 
+            <SidebarDropdownItem label="bar"/> 
+        </SidebarDropdownWrapper>
+        <SidebarDropdownWrapper label="🌩️ Try Akash">
+            <SidebarDropdownItem label="foo"/> 
+            <SidebarDropdownItem label="bar"/> 
+        </SidebarDropdownWrapper>
+        <SidebarDropdownWrapper label="🤐 Try Secret Network">
+            <SidebarDropdownItem label="🖼️ Get NFTs Privately Using Stashh"/> 
+            <SidebarDropdownItem label="bar"/> 
+        </SidebarDropdownWrapper>
+        <SidebarDropdownWrapper label="🚶‍♀️ Try Stride">
+            <SidebarDropdownItem label="foo"/> 
+            <SidebarDropdownItem label="bar"/> 
+        </SidebarDropdownWrapper>
+        <SidebarDropdownWrapper label="🧬 Try Injective">
+            <SidebarDropdownItem label="foo"/> 
+            <SidebarDropdownItem label="bar"/> 
+        </SidebarDropdownWrapper>
 	</SidebarGroup>
 </Sidebar>
 
