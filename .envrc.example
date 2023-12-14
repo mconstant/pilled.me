@@ -1,0 +1,2 @@
+use nix
+export AKASH_SEED="some secret akash wallet mnemonic"
