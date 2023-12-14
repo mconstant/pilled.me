@@ -16,6 +16,7 @@ in
 
     shellHook = ''
       git config --local include.path "$PWD/.gitconfig"
+      cd cosmos.pilled.me && npm install
     '';
   };
 }
