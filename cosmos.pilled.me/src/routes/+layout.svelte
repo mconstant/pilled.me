@@ -4,6 +4,7 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import {
+		Button,
 		Sidebar,
 		SidebarBrand,
 		SidebarGroup,
@@ -64,6 +65,7 @@
 		</SidebarDropdownWrapper>
 	</SidebarGroup>
 </Sidebar>
+
 
 <div class="flex px-4 mx-auto w-full">
 	<main class="lg:ml-72 w-full mx-auto p-4 flex items-center justify-center">
