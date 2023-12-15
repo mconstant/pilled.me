@@ -1,9 +1,12 @@
 <script>
 	import '../app.pcss';
-    import logoUrl from '/images/cosmos-space-gravity-planet-svgrepo-com.svg'
+	import logoUrl from '/images/cosmos-space-gravity-planet-svgrepo-com.svg';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import { NavHamburger } from 'flowbite-svelte';
+	let isOpen = false;
+
 	import {
 		Sidebar,
 		SidebarBrand,
@@ -18,6 +21,7 @@
 		href: '/blast-off',
 		img: logoUrl
 	};
+
 	// use $page.path directly
 	$: activeUrl = $page.url.pathname;
 	onMount(() => {

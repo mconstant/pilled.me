@@ -20,7 +20,7 @@
           buildInputs = [pkgs.yarn node-modules];
           buildPhase = ''
             ln -s ${node-modules}/libexec/cosmos.pilled.me/node_modules node_modules
-            ${pkgs.yarn}/bin/yarn --offline --frozen-lockfile build
+            ${pkgs.yarn}/bin/yarn --offline build
           '';
           installPhase =  ''
           mkdir $out
