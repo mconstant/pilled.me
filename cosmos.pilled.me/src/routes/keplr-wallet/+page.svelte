@@ -1,12 +1,8 @@
 <script>
 	import { Heading, P, Button } from 'flowbite-svelte';
+    import keplrLogoUrl from '/images/intro-logo.png'
+    import createWalletUrl from '/images/create-wallet.png'
 </script>
-
-<style>
-	.button-width {
-		width: 20px; /* adjust as needed */
-	}
-</style>
 
 <div>
 	<Heading
@@ -23,12 +19,12 @@
 		<li>
 			Click the button below to Download and Install Keplr Wallet for Cosmos<br>
             <Button href="https://www.keplr.app/download" target=”_blank” class="button-width">
-				<img src="images/intro-logo.png" alt="keplr-logo" />
+				<img src="{keplrLogoUrl}" alt="keplr-logo" />
 			</Button>
 		</li>
 		<li>
 			Choose <code>Create New Wallet</code><br>
-            <img src="images/create-wallet.png" width="25%" alt="">
+            <img src="{createWalletUrl}" width="25%" alt="">
 		</li>
 		<li>Buy $20 of USDC on Coinbase</li>
 	</ol>

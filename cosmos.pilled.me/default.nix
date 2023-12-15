@@ -1,7 +1,13 @@
-# default.nix
+{
+  system ? builtins.currentSystem,
+  sources ? import ./nix/sources.nix,
+}:
 let
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-22.11";
-  pkgs = import nixpkgs { config = {}; overlays = []; };
+  pkgs = import sources.nixpkgs {
+    config = { };
+    overlays = [ ];
+    inherit system;
+  };
   build = pkgs.callPackage ./build.nix {};
 in
 {

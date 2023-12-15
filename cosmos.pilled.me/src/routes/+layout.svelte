@@ -1,5 +1,6 @@
 <script>
 	import '../app.pcss';
+    import logoUrl from '/images/cosmos-space-gravity-planet-svgrepo-com.svg'
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -15,7 +16,7 @@
 	let site = {
 		name: 'cosmos.pilled.me',
 		href: '/blast-off',
-		img: '/images/cosmos-space-gravity-planet-svgrepo-com.svg'
+		img: logoUrl
 	};
 	// use $page.path directly
 	$: activeUrl = $page.url.pathname;
