@@ -4,7 +4,6 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import {
-		Button,
 		Sidebar,
 		SidebarBrand,
 		SidebarGroup,
@@ -15,13 +14,15 @@
 
 	let site = {
 		name: 'cosmos.pilled.me',
-		href: '/',
+		href: '/blast-off',
 		img: '/images/cosmos-space-gravity-planet-svgrepo-com.svg'
 	};
 	// use $page.path directly
 	$: activeUrl = $page.url.pathname;
 	onMount(() => {
-		goto('/blast-off');
+		if (activeUrl === '/') {
+			goto('/blast-off');
+		}
 	});
 </script>
 
@@ -31,15 +32,19 @@
 >
 	<SidebarBrand {site} />
 	<SidebarGroup>
+		<SidebarItem label="🪐 What is Cosmos" href={`/what-is`} active={activeUrl === '/what-is'}
+		></SidebarItem>
+	</SidebarGroup>
+	<SidebarGroup border>
 		<SidebarItem label="🚀 Blast Off" href={`/blast-off`} active={activeUrl === '/blast-off'}
 		></SidebarItem>
 		<SidebarItem label="▶️ First Steps" href={`/first-steps`} active={activeUrl === '/first-steps'}
 		></SidebarItem>
 	</SidebarGroup>
 	<SidebarGroup border>
-		<SidebarItem label="🪐 What is Cosmos"></SidebarItem>
-		<SidebarItem label="🚨 Must Knows"></SidebarItem>
-		<SidebarItem label="🏛️ Get a Wallet"></SidebarItem>
+		<SidebarItem label="🚨 Must Knows" href={`/must-knows`} active={activeUrl === '/must-knows'}
+		></SidebarItem>
+		<SidebarItem label="🏛️ Get Keplr Wallet"></SidebarItem>
 		<SidebarItem label="🪙 Get Coinbase"></SidebarItem>
 	</SidebarGroup>
 	<SidebarGroup border>
@@ -65,7 +70,6 @@
 		</SidebarDropdownWrapper>
 	</SidebarGroup>
 </Sidebar>
-
 
 <div class="flex px-4 mx-auto w-full">
 	<main class="lg:ml-72 w-full mx-auto p-4 flex items-center justify-center">
