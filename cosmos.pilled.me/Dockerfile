@@ -11,7 +11,7 @@ COPY . /tmp/build
 WORKDIR /tmp/build
 
 # Build our Nix environment
-RUN nix build --cores $CORES --max-jobs $JOBS
+RUN nix build --extra-experimental-features nix-command --extra-experimental-features nix-flakes --cores $CORES --max-jobs $JOBS
 
 # Copy the Nix store closure into a directory. The Nix store closure is the
 # entire set of Nix store values that we need for our build.
