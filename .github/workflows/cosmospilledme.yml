@@ -36,6 +36,6 @@ jobs:
           push: true
           context: "{{defaultContext}}:cosmos.pilled.me"
           tags: xmconstantx/pilledme:latest
-          build-args:
-            CORES: 1
-            JOBS: 1
+          build-args: |
+            CORES=1
+            JOBS=1
