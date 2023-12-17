@@ -1,3 +1,4 @@
+#!/bin/bash
 # Bash 'Strict Mode'
 # http://redsymbol.net/articles/unofficial-bash-strict-mode
 # https://github.com/xwmx/bash-boilerplate#bash-strict-mode
