@@ -37,5 +37,5 @@ jobs:
           context: "{{defaultContext}}:cosmos.pilled.me"
           tags: xmconstantx/pilledme:latest
           build-args:
-            - CORES=1
-            - JOBS=1
+            CORES: 1
+            JOBS: 1
