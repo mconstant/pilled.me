@@ -2,6 +2,7 @@
 # yarn lockfile v1
 
 
+<<<<<<< Updated upstream
 "@esbuild/android-arm64@0.19.9":
   version "0.19.9"
   resolved "https://registry.npmjs.org/@esbuild/android-arm64/-/android-arm64-0.19.9.tgz#683794bdc3d27222d3eced7b74cad15979548031"
@@ -264,3 +265,5 @@ vite@^5.0.10:
     rollup "^4.2.0"
   optionalDependencies:
     fsevents "~2.3.3"
+=======
+>>>>>>> Stashed changes
